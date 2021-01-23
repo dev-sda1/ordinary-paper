@@ -1,0 +1,52 @@
+﻿<Page x:ConnectionId='1' x:Name="Main"
+    x:Class="Nothing.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Nothing"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" KeyboardAcceleratorPlacementMode="Hidden">
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/Paper.png" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Grid x:ConnectionId='2' x:Name="Grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:ConnectionId='3' x:Name="Title" Grid.Row="0" HorizontalAlignment="Center" Text="Just ordinary paper" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="64" FocusVisualPrimaryBrush="Black" Foreground="Black" FontFamily="Ink Free" FontWeight="Normal"                      />
+        <Grid x:ConnectionId='4' x:Name="ButtonLayout" Grid.Row="1" Height="111" VerticalAlignment="Top" HorizontalAlignment="Center" Width="454" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:ConnectionId='8' x:Name="AButton" Content="&#xD;&#xA;" FontSize="28"                       Width="110">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/AButton.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="{Binding ActualSize, ElementName=ButtonLayout, Mode=OneWay}">
+                <Button x:ConnectionId='7' x:Name="BButton" Content="&#xD;&#xA;" FontSize="28"                       Width="110">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/BButton.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="{Binding ActualSize, ElementName=ButtonLayout, Mode=OneWay}">
+                <Button x:ConnectionId='6' x:Name="StartButton" Content="&#xD;&#xA;" FontSize="28"                           Width="110">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Assets/StartButton.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <TextBlock x:ConnectionId='5' x:Name="Anger" Grid.Row="1" HorizontalAlignment="Left" Text="Angered: 0" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="22" FocusVisualPrimaryBrush="Black" Foreground="Black" FontFamily="Ink Free" FontWeight="Normal" Margin="10,0,0,8"/>
+    </Grid>
+</Page>
+

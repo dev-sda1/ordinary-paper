@@ -1,0 +1,2 @@
+MainPackage=C:\Users\James\source\repos\Nothing\Nothing\bin\x86\Release\Upload\Nothing_1.0.8.0_x86.msix
+SymbolPackage=C:\Users\James\source\repos\Nothing\Nothing\bin\x86\Release\Upload\Nothing_1.0.8.0\Nothing_1.0.8.0_x86.appxsym

@@ -1,0 +1,11 @@
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\Nothing.csprojAssemblyReference.cache
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\App.g.i.cs
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\App.g.cs
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\MainPage.g.i.cs
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\MainPage.g.cs
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\XamlTypeInfo.g.cs
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\App.xaml
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\MainPage.xaml
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\App.xbf
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\MainPage.xbf
+C:\Users\James\source\repos\Nothing\Nothing\obj\ARM\Debug\XamlSaveStateFile.xml

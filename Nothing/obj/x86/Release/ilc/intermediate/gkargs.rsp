@@ -1,0 +1,7 @@
+﻿"C:\Users\James\source\repos\Nothing\Nothing\obj\x86\Release\ilc\in\Blankpaper.exe"
+/Lib:"C:\Users\James\source\repos\Nothing\Nothing\obj\x86\Release\ilc\in"
+/Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.2.8-rel-28605-00\tools\x86\ilc\lib\Private"
+/WinMD:"C:\Users\James\source\repos\Nothing\Nothing\obj\x86\Release\ilc\in\WinMetadata\Windows.winmd"
+/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"37c83e0f-4b9d-4932-a184-6e6472c02156","Id":"107146e1-814f-4efc-ae2e-35a243153a70","ProcessStartTime":637460614194076734}"
+/RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\2.2.8-rel-28605-00\tools\LibraryXML"
+/RunOnlyPreDR
