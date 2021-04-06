@@ -26256,6 +26256,25 @@ namespace Windows.UI.Xaml
 				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
 			}
 
+			// Signature, Windows.UI.Xaml.IUIElement.put_ManipulationMode, [fwd] [return] [EETypeRva:0x00042030] void__int, [fwd] [in] [EETypeRva:0x00042D60] Windows_UI_Xaml_Input_ManipulationModes__Windows_UI_Xaml_Input__ManipulationModes, 
+			public static void put_ManipulationMode(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Input.ManipulationModes value)
+			{
+				// Setup
+				int unsafe___hr;
+				// Marshalling
+				// Call to native method
+				unsafe___hr = global::__Interop.ComCallHelpers.Call(
+									__this, 
+									typeof(global::Windows.UI.Xaml.IUIElement).TypeHandle, 
+									39, 
+									value
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				// Return
+			}
+
 			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_KeyUp(
 						global::System.__ComObject __this, 
 						global::Windows.UI.Xaml.Input.KeyEventHandler handler)
@@ -32291,6 +32310,28 @@ namespace Windows.UI.Xaml.Controls
 				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
 				return __ret;
 			}
+
+			public static global::Windows.UI.Xaml.Media.Brush get_Background(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Media.Brush __ret = global::__Interop.ForwardComStubs.Stub_2<global::Windows.UI.Xaml.Controls.IPanel, global::Windows.UI.Xaml.Media.Brush>(
+									__this, 
+									7
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				return __ret;
+			}
+
+			public static void put_Background(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Media.Brush value)
+			{
+				global::__Interop.ForwardComStubs.Stub_21<global::Windows.UI.Xaml.Controls.IPanel, global::Windows.UI.Xaml.Media.Brush>(
+									__this, 
+									value, 
+									8
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			}
 		}
 	}
 
@@ -34616,6 +34657,35 @@ namespace Windows.UI.Xaml.Input
 				[global::System.Runtime.CompilerServices.NonArray]
 				static readonly byte[] RVA_Windows_UI_Xaml_Input_ManipulationDeltaEventHandler__Impl_Vtbl_s_staticVtable = new byte[] {
 						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs
+	public unsafe static class IManipulationDeltaRoutedEventArgs__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs'
+		public static partial class Stubs
+		{
+			// Signature, Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs.get_Cumulative, [fwd] [return] [EETypeRva:0x00042030] void__int, [fwd] [out] [retval] [nativebyref] [EETypeRva:0x0004314C] Windows_UI_Input_ManipulationDelta__Windows_UI_Input__ManipulationDelta, 
+			public static global::Windows.UI.Input.ManipulationDelta get_Cumulative(global::System.__ComObject __this)
+			{
+				// Setup
+				global::Windows.UI.Input.ManipulationDelta unsafe_value__retval;
+				global::Windows.UI.Input.ManipulationDelta value__retval;
+				int unsafe___hr;
+				// Marshalling
+				// Call to native method
+				unsafe___hr = global::__Interop.ComCallHelpers.Call(
+									__this, 
+									typeof(global::Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs).TypeHandle, 
+									10, 
+									&(unsafe_value__retval)
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				value__retval = unsafe_value__retval;
+				// Return
+				return value__retval;
 			}
 		}
 	}

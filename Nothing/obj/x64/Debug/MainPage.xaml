@@ -5,12 +5,17 @@
     xmlns:local="using:Nothing"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" KeyboardAcceleratorPlacementMode="Hidden">
+    mc:Ignorable="d" KeyboardAcceleratorPlacementMode="Hidden"
+                                              
+                                                      >
     <Page.Background>
         <ImageBrush ImageSource="/Assets/Paper.png" Stretch="UniformToFill"/>
     </Page.Background>
 
-    <Grid x:ConnectionId='2' x:Name="Grid">
+    <Grid x:ConnectionId='2' x:Name="Grid"
+                                                    
+                                                            
+          Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>

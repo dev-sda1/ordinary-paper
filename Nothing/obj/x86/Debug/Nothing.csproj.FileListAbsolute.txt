@@ -45,3 +45,4 @@ C:\Users\James\source\repos\Nothing\Nothing\bin\x86\Debug\Core\Blankpaper.exe
 C:\Users\James\source\repos\Nothing\Nothing\bin\x86\Debug\Core\ForBundle\AppxManifest.xml
 C:\Users\James\source\repos\Nothing\Nothing\obj\x86\Debug\Blankpaper.exe
 C:\Users\James\source\repos\Nothing\Nothing\obj\x86\Debug\Blankpaper.pdb
+C:\Users\James\source\repos\Nothing\Nothing\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424815200000000.json

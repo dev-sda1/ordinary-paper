@@ -14,13 +14,13 @@
     <BadgeLogoSource>C:\Users\James\Desktop\oWo.png</BadgeLogoSource>
     <PackageLogoSource>C:\Users\James\Desktop\oWo.png</PackageLogoSource>
     <UapAppxPackageBuildMode>StoreAndSideload</UapAppxPackageBuildMode>
-    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxShowAllApps>True</AppxShowAllApps>
     <AppxBuildConfigurationSelection>x86|x64</AppxBuildConfigurationSelection>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <RemoteDebugEnabled>false</RemoteDebugEnabled>
-    <RemoteDebugMachine>XBOXONE</RemoteDebugMachine>
+    <RemoteDebugMachine>DESKTOP-OOQF3H1</RemoteDebugMachine>
     <DoNotLaunchApp>false</DoNotLaunchApp>
     <CreateCleanLayout>true</CreateCleanLayout>
     <DeployOptionalPackages>true</DeployOptionalPackages>

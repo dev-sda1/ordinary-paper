@@ -5,17 +5,22 @@
     xmlns:local="using:Nothing"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" KeyboardAcceleratorPlacementMode="Hidden">
+    mc:Ignorable="d" KeyboardAcceleratorPlacementMode="Hidden"
+                                              
+                                                      >
     <Page.Background>
         <ImageBrush ImageSource="/Assets/Paper.png" Stretch="UniformToFill"/>
     </Page.Background>
 
-    <Grid x:ConnectionId='2' x:Name="Grid">
+    <Grid x:ConnectionId='2' x:Name="Grid"
+                                                    
+                                                            
+          Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:ConnectionId='3' x:Name="Title" Grid.Row="0" HorizontalAlignment="Center" Text="Just ordinary paper" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="64" FocusVisualPrimaryBrush="Black" Foreground="Black" FontFamily="Ink Free" FontWeight="Normal"/>
+        <TextBlock x:ConnectionId='3' x:Name="Title" Grid.Row="0" HorizontalAlignment="Center" Text="Just ordinary paper" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Center" FontSize="64" FocusVisualPrimaryBrush="Black" Foreground="Black" FontFamily="Ink Free" FontWeight="Normal"                      />
         <Grid x:ConnectionId='4' x:Name="ButtonLayout" Grid.Row="1" Height="111" VerticalAlignment="Top" HorizontalAlignment="Center" Width="454" Margin="0,10,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>

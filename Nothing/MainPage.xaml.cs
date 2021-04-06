@@ -8,20 +8,38 @@ using Windows.UI;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.UI.Xaml.Input;
 
-namespace Nothing{
+namespace Nothing
+{
     public sealed partial class MainPage : Page
     {
+        private bool swiped;
+        private bool swipedY;
+        //private bool xswipe;
+        //private bool yswipe;
+
         public int counter = 0;
         public int angers;
         public string keysPressed = "";
         public string btnsPressed = "";
-        public string[] randstrings = { ">w<", "owch!", "get off me >:(" };
+        public string[] randstrings = { ">w<", "owch!", "the code", "X Y Z" };
         public bool angerinProgress = false;
 
         public MainPage()
         {
             this.InitializeComponent();
+
+            this.ManipulationMode = ManipulationModes.All &
+                ~ManipulationModes.TranslateRailsY &
+                ~ManipulationModes.TranslateInertia &
+                ~ManipulationModes.System;
+
+            Grid.ManipulationMode = ManipulationModes.All &
+                ~ManipulationModes.TranslateRailsX &
+                // ~ManipulationModes.TranslateRailsY &
+                ~ManipulationModes.TranslateInertia &
+                ~ManipulationModes.System;
 
             ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
             if (!(localSettings.Values["Angers"] is int localValue))
@@ -31,7 +49,7 @@ namespace Nothing{
             }
             else
             {
-                Debug.WriteLine("Angers previously: "+(int)localSettings.Values["Angers"]);
+                Debug.WriteLine("Angers previously: " + (int)localSettings.Values["Angers"]);
                 angers = (int)localSettings.Values["Angers"];
                 Anger.Text = "Angered: " + (int)localSettings.Values["Angers"];
             }
@@ -41,10 +59,109 @@ namespace Nothing{
             Window.Current.CoreWindow.KeyDown += CoreWindow_KeyDown;
         }
 
+        private void Grid_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
+        {
+            swiped = false;
+            Debug.WriteLine(keysPressed);
+
+            string hi = keysPressed.Substring(Math.Max(0, keysPressed.Length - 30));
+            if (hi == "UpUpDownDownLeftRightLeftRight" ^ hi == "WWSSADAD")
+            {
+                //DisplayNineThousand();
+                //counter = 0;
+                //AButton.Focus(FocusState.Programmatic);
+                ButtonLayout.Visibility = Visibility.Visible;
+                keysPressed = "";
+                Task.Factory.StartNew(
+                    () => Dispatcher.RunAsync(CoreDispatcherPriority.Low,
+                    () => AButton.Focus(FocusState.Programmatic)));
+            }
+
+            Debug.WriteLine(keysPressed.Substring(Math.Max(0, keysPressed.Length - 30)));
+        }
+
+        private void Grid_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
+        {
+            if (!swiped && !swipedY)
+            {
+                var swipedDistanceX = e.Cumulative.Translation.X;
+                //var swipedDistanceY = e.Cumulative.Translation.Y;
+
+                if (Math.Abs(swipedDistanceX) <= 2) return;
+                //if (Math.Abs(swipedDistanceY) <= 2) return;
+
+                Debug.WriteLine("X Distance Swiped: " + swipedDistanceX);
+                //Debug.WriteLine("Y Distance Swiped: " + swipedDistanceY+"\n");
+
+
+                if (swipedDistanceX > 0)
+                {
+                    keysPressed = keysPressed + "Right";
+                    //Debug.WriteLine("Swiped Right\n");
+                }
+                else
+                {
+                    keysPressed = keysPressed + "Left";
+                    //Debug.WriteLine("Swiped Left\n");
+                }
+                swiped = true;
+            }
+        }
+
+        private void Main_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
+        {
+            swipedY = false;
+            Debug.WriteLine(keysPressed);
+
+            string hi = keysPressed.Substring(Math.Max(0, keysPressed.Length - 30));
+            if (hi == "UpUpDownDownLeftRightLeftRight" ^ hi == "WWSSADAD")
+            {
+                //DisplayNineThousand();
+                //counter = 0;
+                //AButton.Focus(FocusState.Programmatic);
+                ButtonLayout.Visibility = Visibility.Visible;
+                keysPressed = "";
+                Task.Factory.StartNew(
+                    () => Dispatcher.RunAsync(CoreDispatcherPriority.Low,
+                    () => AButton.Focus(FocusState.Programmatic)));
+            }
+
+            Debug.WriteLine(keysPressed.Substring(Math.Max(0, keysPressed.Length - 30)));
+            //xswipe = false;
+            //yswipe = false;
+        }
+
+        private void Main_ManipulationDelta(object sender, ManipulationDeltaRoutedEventArgs e)
+        {
+            if (!swipedY && !swiped)
+            {
+                //var swipedDistanceX = e.Cumulative.Translation.X;
+                var swipedDistanceY = e.Cumulative.Translation.Y;
+
+                //if (Math.Abs(swipedDistanceX) <= 2) return;
+                if (Math.Abs(swipedDistanceY) <= 2) return;
+
+                //Debug.WriteLine("X Distance Swiped: " + swipedDistanceX);
+                Debug.WriteLine("Y Distance Swiped: " + swipedDistanceY+"\n");
+
+
+                if (swipedDistanceY > 0)
+                {
+                    keysPressed = keysPressed + "Down";
+                    //Debug.WriteLine("Swiped Down\n");
+                }
+                else
+                {
+                    keysPressed = keysPressed + "Up";
+                    //Debug.WriteLine("Swiped Up\n");
+                }
+                swipedY = true;
+            }
+        }
 
         private void CoreWindow_KeyDown(CoreWindow sender, KeyEventArgs e)
         {
-            Debug.WriteLine("Key was pressed:"+e.VirtualKey);
+            Debug.WriteLine("Key was pressed:" + e.VirtualKey);
 
             keysPressed = keysPressed + e.VirtualKey;
             keysPressed = keysPressed.Replace("Number", "");
@@ -57,7 +174,7 @@ namespace Nothing{
             //DebugTxt.Text = ""+e.VirtualKey;
 
             string hi = keysPressed.Substring(Math.Max(0, keysPressed.Length - 30));
-            if (hi == "UpUpDownDownLeftRightLeftRight" ^ hi == "")
+            if (hi == "UpUpDownDownLeftRightLeftRight" ^ hi == "WWSSADAD")
             {
                 //DisplayNineThousand();
                 //counter = 0;
@@ -75,7 +192,7 @@ namespace Nothing{
         private async void CheckOrder()
         {
             Debug.WriteLine(btnsPressed);
-            if(counter == 3)
+            if (counter == 3)
             {
                 if (btnsPressed == "BASTART")
                 {
@@ -149,7 +266,7 @@ namespace Nothing{
             }
         }
 
-        
+
         private void AButton_Click(object sender, RoutedEventArgs e)
         {
             btnsPressed += "A";
@@ -173,7 +290,7 @@ namespace Nothing{
 
         private async void Title_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            if(angerinProgress == true)
+            if (angerinProgress == true)
             {
                 return;
             }

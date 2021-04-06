@@ -1,1 +1,1 @@
-C:\Users\James\source\repos\Nothing\Nothing\AppPackages\Nothing_1.0.8.0_Debug_Test\Nothing_1.0.8.0_x86_x64_Debug.msixbundle
+C:\Users\James\source\repos\Nothing\Nothing\Builds\Nothing_1.0.11.0_Debug_Test\Nothing_1.0.11.0_x86_x64_Debug.msixbundle

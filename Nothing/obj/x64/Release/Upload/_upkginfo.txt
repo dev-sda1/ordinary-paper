@@ -1,1 +1,1 @@
-C:\Users\James\source\repos\Nothing\Nothing\Builds\Nothing_1.0.8.0_x86_x64_bundle.msixupload
+C:\Users\James\source\repos\Nothing\Nothing\Builds\Nothing_1.1.0.0_x86_x64_bundle.msixupload
